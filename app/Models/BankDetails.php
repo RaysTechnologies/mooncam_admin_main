@@ -11,7 +11,17 @@ class BankDetails extends Model
     use HasFactory;
     use Searchable;
 
-    protected $fillable = ['country', 'host_profile_id'];
+    protected $fillable = [
+    	'name', 
+    	'address' , 
+    	'mobile' , 
+    	'email' , 
+    	'account_no' , 
+    	'ifsc' , 
+    	'upiid_1' , 
+    	'upiid_2' ,
+    	'host_profile_id'
+    ];
 
     protected $searchableFields = ['*'];
 

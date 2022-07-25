@@ -39,9 +39,12 @@ class BankDetailsController extends Controller
     {
         $this->authorize('create', BankDetails::class);
 
-        $hostProfiles = HostProfile::pluck('name', 'id');
+        $hostProfiles = HostProfile::pluck('name' , 'id');
 
-        return view('app.all_bank_details.create', compact('hostProfiles'));
+        return view(
+            'app.all_bank_details.create', 
+            compact('hostProfiles')
+        );
     }
 
     /**
@@ -82,7 +85,7 @@ class BankDetailsController extends Controller
     {
         $this->authorize('update', $bankDetails);
 
-        $hostProfiles = HostProfile::pluck('name', 'id');
+        $hostProfiles = HostProfile::pluck('name','id');
 
         return view(
             'app.all_bank_details.edit',
