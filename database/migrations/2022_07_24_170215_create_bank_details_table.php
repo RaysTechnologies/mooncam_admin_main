@@ -1,10 +1,11 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration {
+return new class extends Migration
+{
     /**
      * Run the migrations.
      *
@@ -14,7 +15,14 @@ return new class extends Migration {
     {
         Schema::create('bank_details', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('country')->nullable();
+            $table->string('name');
+            $table->text('address');
+            $table->string('mobile');
+            $table->string('email');
+            $table->string('account_no');
+            $table->string('ifsc');
+            $table->string('upiid_1');
+            $table->string('upiid_2');
             $table->unsignedBigInteger('host_profile_id');
 
             $table->timestamps();

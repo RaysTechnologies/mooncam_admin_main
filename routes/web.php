@@ -73,7 +73,7 @@ Route::prefix('/')
             BankDetailsController::class,
             'destroy',
         ])->name('all-bank-details.destroy');
-
+       // Route::resource('all-bank-details', BankDetailsController::class);
         Route::resource('call-prices', CallPriceController::class);
         Route::resource('country-lists', CountryListController::class);
         Route::resource(
